@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: second_level_cache
+  datasource:
+    url: jdbc:postgresql://localhost:5432/from_tests
+    username: postgres
+    password: 123
+
+  jpa:
+    properties:
+      hibernate:
+        cache:
+          use_second_level_cache: true
+          region:
+            factory_class: org.hibernate.cache.jcache.internal.JCacheRegionFactory
+        show_sql: true
